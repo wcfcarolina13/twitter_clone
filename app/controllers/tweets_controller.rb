@@ -1,6 +1,10 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: [:show, :edit, :update, :destroy]
 
+  before_action :authenticate_user!
+
+  # Before you can do anythign with the tweet controller, it'll force you to log in, so it'll redirect you to the login page.
+
   # GET /tweets
   # GET /tweets.json
   def index

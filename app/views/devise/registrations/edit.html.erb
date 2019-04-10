@@ -19,9 +19,15 @@
 
   <div class="form-group">
     <%= f.text_area :bio, placeholder: "Tell us about yourself", class: 'form-control' %>
+    
+  </div class="form-group">
+    <p>Upload a Profile Picture:</p>
+    <%= f.file_field :avatar %>
+  <div>
+    
   </div>
   <!-- What we added is above -->
-  
+
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
