@@ -3,3 +3,4 @@
 <% @tag.tweets.order(created_at: :desc).each do |tweet| %>
 	<%= render 'layouts/tweet_card', tweet: tweet %>
 <% end %>
+
