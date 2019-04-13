@@ -1,3 +1,26 @@
 // Place all the styles related to the Tweets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.tweet-container {
+	background-color: white;
+	width: 580px;
+	padding: 8px 12px 8px 58px;
+	margin-bottom: 1px;
+}
+
+.check {
+	position: relative;
+	top: -3px;
+	font-size: 8px;
+}
+
+.tweet-input {
+	width: 400px;
+	margin-right: 24px;
+	padding: 6px 10px;
+	border-radius: 8px;
+	border: 2px solid #1da1f2;
+}
+
+textarea, select, input, button { outline: none; }

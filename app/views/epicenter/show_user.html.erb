@@ -1,8 +1,5 @@
-<!-- <h1>Epicenter#show_user</h1>
-<p>Find me in app/views/epicenter/show_user.html.erb</p>
+<h1>@<%= @user.username %>'s Profile & Tweets</h1>
 
-<h1>@<%= @user.username %>'s Profile & Tweets</h1> -->
-<h1>Friend Feed</h1>
 <p><%= @user.name %></p>
 <p><%= @user.location %></p>
 <p><%= @user.bio %></p>
@@ -18,8 +15,5 @@
 </p>
 
 <% @user.tweets.each do |tweet| %>
-    <div>
-        <p>@<%= @user.username %></p>
-    <p><%= tweet.message %></p>
-    </div>
+    <%= render 'layouts/tweet_card', tweet: tweet %>
 <% end %>

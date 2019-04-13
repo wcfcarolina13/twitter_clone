@@ -1,3 +1,5 @@
+<% random_tweet %>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Tweets</h1>
@@ -14,7 +16,8 @@
   <tbody>
     <% @tweets.each do |tweet| %>
       <tr>
-        <td><%= tweet.message %></td>
+        <td><%= tweet.message.html_safe %></td>
+        <!-- Added an html_safe up here -->
         <td><%= link_to tweet.user.username, show_user_path(id: tweet.user.id) %></td>
         <td><%= link_to 'Show', tweet %></td>
         <td><%= link_to 'Edit', edit_tweet_path(tweet) %></td>
